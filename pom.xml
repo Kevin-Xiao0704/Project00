@@ -3,4 +3,14 @@
   <groupId>00-maven1</groupId>
   <artifactId>00-maven1</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  	<dependencies>
+
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.18.30</version>
+		</dependency>
+
+
+	</dependencies>
 </project>
