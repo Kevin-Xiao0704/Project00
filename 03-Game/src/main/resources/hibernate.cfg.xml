@@ -40,8 +40,7 @@
         </property>
 
         <!-- List of XML mapping files -->
-         <mapping class="com.course.entity.GameEntity" />
-         <mapping class="com.course.entity.GameHistoryEntity" />
+        <mapping class="com.entity.UserEntity" />
 
     </session-factory>
 </hibernate-configuration>
