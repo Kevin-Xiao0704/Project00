@@ -10,22 +10,22 @@
 	<input type="hidden" id="id" th:field="*{id}"/>
     <div>
         <label for="title">標題:</label>
-        <input type="text" id="title" th:field="*{title}" />
+        <input type="text" id="title" th:field="*{title}"/>
     </div>
     <div>
         <label for="dueDate">到期日:</label>
-        <input type="date" id="dueDate" th:field="*{dueDate}" />
+        <input type="date" id="dueDate" th:field="*{dueDate}"/>
     </div>
     <div>
         <label>狀態:</label>
-        <input type="radio" id="notCompleted" name="status" value="0" th:field="*{status}"/>
+        <input type="radio" id="notCompleted" name="status" value="0" th:field="*{status}" />
         <label for="notCompleted">未完成</label>
-        <input type="radio" id="completed" name="status" value="1" th:field="*{status}"/>
+        <input type="radio" id="completed" name="status" value="1" th:field="*{status}" />
         <label for="completed">已完成</label>
     </div>
     <div>
         <label for="memo">備註:</label>
-        <input type="text" id="memo" th:field="*{memo}" />
+        <input type="text" id="memo" th:field="*{memo}"/>
     </div>
     <div>
         <button type="submit">更新待辦事項</button>
