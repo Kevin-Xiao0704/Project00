@@ -14,3 +14,13 @@ spring:
         format_sql: true
     hibernate:
       ddl-auto: none
+logging:
+  level: 
+    com.course: trace
+  file:
+    path: C:\Users\student\log
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+  mapper-locations: classpath:mappers/*.xml
+  type-aliases-package: com.course.dto

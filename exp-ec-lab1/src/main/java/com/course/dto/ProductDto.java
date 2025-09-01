@@ -1,9 +1,29 @@
 package com.course.dto;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
+import java.util.List;
 
-public class ProductDto {
+//@SqlResultSetMapping(
+//	    name = "ProductDtoMapping",
+//	    classes = @ConstructorResult(
+//	        targetClass = ProductDto.class,
+//	        columns = {
+//        		@ColumnResult(name = "ID", type = Long.class),
+//        		@ColumnResult(name = "CODE", type = String.class),
+//	            @ColumnResult(name = "NAME", type = String.class),
+//	            @ColumnResult(name = "LIST_PRICE", type = BigDecimal.class),
+//	            @ColumnResult(name = "SALES_PRICE", type = BigDecimal.class),
+//	            @ColumnResult(name = "MEMO", type = String.class)
+//	        }
+//	    )
+//	)
+//@Entity
+public class ProductDto implements Serializable {
 
+private static final long serialVersionUID = 1L;
+
+	//	@Id
 	private Long id;
 	
 	private String code;
@@ -17,9 +37,46 @@ public class ProductDto {
 	private String memo;
 	
 	private String cname;
+	
+	private Long productId;
+	
+	private List<String> memos;
 
 	public ProductDto() {
 
+	}
+
+	public ProductDto(String code, String name) {
+		super();
+		this.code = code;
+		this.name = name;
+	}
+
+	public ProductDto(Long id, String code, String name, BigDecimal listPrice, BigDecimal salesPrice, String memo) {
+		super();
+		this.id = id;
+		this.code = code;
+		this.name = name;
+		this.listPrice = listPrice;
+		this.salesPrice = salesPrice;
+		this.memo = memo;
+	}
+	
+	public ProductDto(String code, String name, BigDecimal listPrice, BigDecimal salesPrice) {
+		super();
+		this.code = code;
+		this.name = name;
+		this.listPrice = listPrice;
+		this.salesPrice = salesPrice;
+	}
+	
+	public ProductDto(String code, String name, BigDecimal listPrice, BigDecimal salesPrice, String memo) {
+		super();
+		this.code = code;
+		this.name = name;
+		this.listPrice = listPrice;
+		this.salesPrice = salesPrice;
+		this.memo = memo;
 	}
 
 	public Long getId() {
@@ -76,6 +133,22 @@ public class ProductDto {
 
 	public void setCname(String cname) {
 		this.cname = cname;
+	}
+
+	public Long getProductId() {
+		return productId;
+	}
+
+	public void setProductId(Long productId) {
+		this.productId = productId;
+	}
+
+	public List<String> getMemos() {
+		return memos;
+	}
+
+	public void setMemos(List<String> memos) {
+		this.memos = memos;
 	}
 
 }
